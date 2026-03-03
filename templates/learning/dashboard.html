@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard — EduBot V3{% endblock %}
+
+{% block content %}
+
+  <!-- Message de bienvenue -->
+  <section class="mb-8">
+    <h1 class="text-3xl font-bold">
+      Bon retour, <span class="text-brandGlow">{{ request.user.username }}</span>
+    </h1>
+    <p class="text-gray-400 mt-2 text-lg">{{ daily_message }}</p>
+  </section>
+
+  <!-- Cartes de Statistiques -->
+  <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
+    {% for stat in stats %}
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-5 hover:-translate-y-1 hover:border-gray-700 transition-all">
+      <p class="text-gray-400 text-sm font-medium">{{ stat.label }}</p>
+      <p class="text-3xl font-bold text-white mt-1">{{ stat.value }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- Packs de Compétences -->
+  <section>
+    <div class="flex justify-between items-end mb-6">
+      <h2 class="text-xl font-bold">Packs Disponibles</h2>
+      <a href="{% url 'learning:pack_list' %}" class="text-sm text-brandMain hover:text-brandGlow font-medium">
+        Voir tout →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      {% for item in packs_with_progress %}
+      <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6 group hover:border-brandMain/40 transition-all flex flex-col">
+        
+        <div class="flex justify-between items-start mb-4">
+          <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-700">
+            {{ item.pack.get_difficulty_display }}
+          </span>
+          <span class="text-brandGlow font-bold text-sm">+{{ item.pack.xp_reward }} XP</span>
+        </div>
+
+        <h3 class="font-bold text-xl mb-2 group-hover:text-brandGlow transition-colors">
+          {{ item.pack.title }}
+        </h3>
+        <p class="text-gray-400 text-sm mb-4 flex-1">
+          {{ item.pack.description|truncatechars:100 }}
+        </p>
+
+        <!-- Barre de progression -->
+        <div class="mb-4">
+          <div class="flex justify-between text-xs text-gray-500 mb-1">
+            <span>Progression</span>
+            <span class="text-brandGlow font-medium">{{ item.progress }}%</span>
+          </div>
+          <div class="w-full bg-gray-800 rounded-full h-2">
+            <div class="bg-brandMain h-2 rounded-full transition-all"
+                 style="width: {{ item.progress }}%"></div>
+          </div>
+        </div>
+
+        <a href="{% url 'learning:pack_detail' item.pack.slug %}"
+           class="w-full text-center bg-gray-800 hover:bg-brandMain text-white py-3 rounded-xl text-sm font-medium transition-all duration-300">
+          {% if item.progress == 0 %}
+            Commencer le pack
+          {% elif item.progress == 100 %}
+            Revoir le pack
+          {% else %}
+            Continuer ({{ item.progress }}%)
+          {% endif %}
+        </a>
+
+      </div>
+      {% empty %}
+      <div class="col-span-full bg-gray-900 border border-gray-800 border-dashed rounded-2xl p-10 text-center">
+        <div class="w-16 h-16 bg-gray-800 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg class="w-8 h-8 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+          </svg>
+        </div>
+        <h3 class="text-lg font-bold text-white mb-2">Aucun pack pour le moment</h3>
+        <p class="text-gray-400">Va dans l'administration Django pour créer tes premiers Skill Packs !</p>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

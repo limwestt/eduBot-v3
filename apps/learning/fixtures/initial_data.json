@@ -1,0 +1,3128 @@
+[
+  {
+    "model": "learning.skillpack",
+    "pk": 1001,
+    "fields": {
+      "title": "Python Basics",
+      "slug": "python-basics",
+      "description": "Découvre les bases du langage Python, de la syntaxe aux premiers scripts.",
+      "difficulty": "beginner",
+      "xp_reward": 100,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.skillpack",
+    "pk": 1002,
+    "fields": {
+      "title": "Web Frontend",
+      "slug": "web-frontend",
+      "description": "Apprends à construire des interfaces web modernes avec HTML, CSS et JavaScript.",
+      "difficulty": "beginner",
+      "xp_reward": 120,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.skillpack",
+    "pk": 1003,
+    "fields": {
+      "title": "Data Science Essentials",
+      "slug": "data-science-essentials",
+      "description": "Introduction à l'analyse de données, aux statistiques et à Python scientifique.",
+      "difficulty": "intermediate",
+      "xp_reward": 150,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.skillpack",
+    "pk": 1004,
+    "fields": {
+      "title": "Productivité & Organisation",
+      "slug": "productivite-organisation",
+      "description": "Développe des habitudes et systèmes pour mieux gérer ton temps et tes projets.",
+      "difficulty": "beginner",
+      "xp_reward": 80,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.skillpack",
+    "pk": 1005,
+    "fields": {
+      "title": "Écriture Créative",
+      "slug": "ecriture-creative",
+      "description": "Travaille ton style d'écriture, la narration et la création de personnages.",
+      "difficulty": "intermediate",
+      "xp_reward": 130,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.skillpack",
+    "pk": 1006,
+    "fields": {
+      "title": "Finance Personnelle",
+      "slug": "finance-personnelle",
+      "description": "Comprends les bases de la gestion d'argent, de l'épargne et de l'investissement.",
+      "difficulty": "beginner",
+      "xp_reward": 110,
+      "cover_image": null,
+      "is_published": true,
+      "created_at": "2026-03-02T00:00:00Z",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2001,
+    "fields": {
+      "pack": 1001,
+      "title": "Découvrir Python",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2002,
+    "fields": {
+      "pack": 1001,
+      "title": "Variables et Types",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2003,
+    "fields": {
+      "pack": 1001,
+      "title": "Conditions et Boucles",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2004,
+    "fields": {
+      "pack": 1001,
+      "title": "Fonctions",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2005,
+    "fields": {
+      "pack": 1001,
+      "title": "Listes et Dictionnaires",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2006,
+    "fields": {
+      "pack": 1001,
+      "title": "Mini-projets Python",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2007,
+    "fields": {
+      "pack": 1002,
+      "title": "HTML Fondations",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2008,
+    "fields": {
+      "pack": 1002,
+      "title": "CSS Layout & Design",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2009,
+    "fields": {
+      "pack": 1002,
+      "title": "Bases de JavaScript",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2010,
+    "fields": {
+      "pack": 1002,
+      "title": "Dom & Interactions",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2011,
+    "fields": {
+      "pack": 1002,
+      "title": "Responsive Design",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2012,
+    "fields": {
+      "pack": 1002,
+      "title": "Mini-projets Web",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2013,
+    "fields": {
+      "pack": 1003,
+      "title": "Python pour la Data",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2014,
+    "fields": {
+      "pack": 1003,
+      "title": "Manipuler des données",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2015,
+    "fields": {
+      "pack": 1003,
+      "title": "Visualisation de données",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2016,
+    "fields": {
+      "pack": 1003,
+      "title": "Statistiques de base",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2017,
+    "fields": {
+      "pack": 1003,
+      "title": "Machine Learning Intro",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2018,
+    "fields": {
+      "pack": 1003,
+      "title": "Projet Data Science",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2019,
+    "fields": {
+      "pack": 1004,
+      "title": "Bases de la productivité",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2020,
+    "fields": {
+      "pack": 1004,
+      "title": "Gestion du temps",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2021,
+    "fields": {
+      "pack": 1004,
+      "title": "Organisation personnelle",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2022,
+    "fields": {
+      "pack": 1004,
+      "title": "Systèmes & routines",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2023,
+    "fields": {
+      "pack": 1004,
+      "title": "Focus & énergie",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2024,
+    "fields": {
+      "pack": 1004,
+      "title": "Projet d'organisation",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2025,
+    "fields": {
+      "pack": 1005,
+      "title": "Trouver des idées",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2026,
+    "fields": {
+      "pack": 1005,
+      "title": "Personnages & voix",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2027,
+    "fields": {
+      "pack": 1005,
+      "title": "Construire une intrigue",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2028,
+    "fields": {
+      "pack": 1005,
+      "title": "Dialogues efficaces",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2029,
+    "fields": {
+      "pack": 1005,
+      "title": "Style & réécriture",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2030,
+    "fields": {
+      "pack": 1005,
+      "title": "Projet d'écriture",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2031,
+    "fields": {
+      "pack": 1006,
+      "title": "Fondations financières",
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2032,
+    "fields": {
+      "pack": 1006,
+      "title": "Budget & dépenses",
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2033,
+    "fields": {
+      "pack": 1006,
+      "title": "Épargne & sécurité",
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2034,
+    "fields": {
+      "pack": 1006,
+      "title": "Comprendre l'investissement",
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2035,
+    "fields": {
+      "pack": 1006,
+      "title": "Psychologie de l'argent",
+      "order": 5
+    }
+  },
+  {
+    "model": "learning.module",
+    "pk": 2036,
+    "fields": {
+      "pack": 1006,
+      "title": "Plan financier personnel",
+      "order": 6
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3001,
+    "fields": {
+      "module": 2001,
+      "title": "Pourquoi apprendre Python",
+      "lesson_type": "text",
+      "content": "Python est utilisé dans le web, la data, l'IA et l'automatisation. C'est le langage le plus polyvalent du moment.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3002,
+    "fields": {
+      "module": 2001,
+      "title": "Installer Python sur ton OS",
+      "lesson_type": "video",
+      "content": "Guide pas à pas pour installer Python et vérifier la version en ligne de commande.",
+      "video_url": "https://www.youtube.com/embed/TgA4ObrowRg",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3003,
+    "fields": {
+      "module": 2001,
+      "title": "Exécuter ton premier script",
+      "lesson_type": "challenge",
+      "content": "Écris un script qui affiche 'Hello, EduBot !' dans le terminal.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3004,
+    "fields": {
+      "module": 2001,
+      "title": "Quiz: Découverte de Python",
+      "lesson_type": "quiz",
+      "content": "Questions sur l'installation, l'interpréteur et les usages de Python.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3005,
+    "fields": {
+      "module": 2002,
+      "title": "Variables et affectation",
+      "lesson_type": "text",
+      "content": "Comprends comment créer, nommer et réutiliser des variables en Python.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3006,
+    "fields": {
+      "module": 2002,
+      "title": "Types de base: int, float, str, bool",
+      "lesson_type": "text",
+      "content": "Découvre les principaux types de données pour représenter nombres, texte et booléens.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3007,
+    "fields": {
+      "module": 2002,
+      "title": "Conversions de types",
+      "lesson_type": "challenge",
+      "content": "Écris des fonctions qui convertissent des entrées utilisateur en types corrects.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3008,
+    "fields": {
+      "module": 2002,
+      "title": "Quiz: Types et variables",
+      "lesson_type": "quiz",
+      "content": "Questions à choix multiples sur les types et la gestion de mémoire.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3009,
+    "fields": {
+      "module": 2003,
+      "title": "Conditions if / elif / else",
+      "lesson_type": "text",
+      "content": "Apprends à exécuter du code différent selon des conditions logiques.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3010,
+    "fields": {
+      "module": 2003,
+      "title": "Boucles for",
+      "lesson_type": "text",
+      "content": "Parcours des séquences et répète des actions avec la boucle for.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3011,
+    "fields": {
+      "module": 2003,
+      "title": "Boucles while et gestion des sorties",
+      "lesson_type": "text",
+      "content": "Utilise while pour répéter des actions jusqu'à ce qu'une condition soit remplie.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3012,
+    "fields": {
+      "module": 2003,
+      "title": "Défis: mini-jeux avec boucles",
+      "lesson_type": "challenge",
+      "content": "Crée un jeu de devinette de nombre en utilisant conditions et boucles.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3013,
+    "fields": {
+      "module": 2004,
+      "title": "Définir une fonction",
+      "lesson_type": "text",
+      "content": "Comprends la syntaxe def, les paramètres et la valeur de retour.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3014,
+    "fields": {
+      "module": 2004,
+      "title": "Portée des variables",
+      "lesson_type": "text",
+      "content": "Découvre la différence entre variables locales et globales.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3015,
+    "fields": {
+      "module": 2004,
+      "title": "Fonctions pures vs effets de bord",
+      "lesson_type": "text",
+      "content": "Apprends à écrire des fonctions prévisibles et faciles à tester.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3016,
+    "fields": {
+      "module": 2004,
+      "title": "Défis: bibliothèque utilitaire",
+      "lesson_type": "challenge",
+      "content": "Écris plusieurs petites fonctions utiles (formatage, calculs simples).",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3017,
+    "fields": {
+      "module": 2005,
+      "title": "Listes: créer et modifier",
+      "lesson_type": "text",
+      "content": "Manipule des collections ordonnées de valeurs avec les listes Python.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3018,
+    "fields": {
+      "module": 2005,
+      "title": "Compréhensions de listes",
+      "lesson_type": "text",
+      "content": "Apprends une syntaxe compacte pour transformer et filtrer des listes.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3019,
+    "fields": {
+      "module": 2005,
+      "title": "Dictionnaires: clés et valeurs",
+      "lesson_type": "text",
+      "content": "Stocke des paires clé/valeur pour modéliser des objets simples.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3020,
+    "fields": {
+      "module": 2005,
+      "title": "Défis: mini-gestionnaire de contacts",
+      "lesson_type": "challenge",
+      "content": "Crée un script qui stocke et affiche des contacts avec un dictionnaire.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3021,
+    "fields": {
+      "module": 2006,
+      "title": "Projet: To-do list en ligne de commande",
+      "lesson_type": "challenge",
+      "content": "Combine fonctions, listes et conditions pour gérer une liste de tâches.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3022,
+    "fields": {
+      "module": 2006,
+      "title": "Projet: générateur de mots de passe",
+      "lesson_type": "challenge",
+      "content": "Écris un script qui génère des mots de passe sécurisés et personnalisables.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3023,
+    "fields": {
+      "module": 2006,
+      "title": "Projet: mini-jeu texte",
+      "lesson_type": "challenge",
+      "content": "Crée un petit jeu d'aventure textuelle avec choix multiples.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3024,
+    "fields": {
+      "module": 2006,
+      "title": "Quiz final: Python Basics",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise des concepts clés du pack Python Basics.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3025,
+    "fields": {
+      "module": 2007,
+      "title": "Structure d'une page HTML",
+      "lesson_type": "text",
+      "content": "Comprends les balises fondamentales : html, head, body, et la hiérarchie du DOM.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3026,
+    "fields": {
+      "module": 2007,
+      "title": "Les balises sémantiques HTML5",
+      "lesson_type": "text",
+      "content": "Découvre header, nav, main, section, article, footer pour un code lisible.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3027,
+    "fields": {
+      "module": 2007,
+      "title": "Formulaires HTML",
+      "lesson_type": "text",
+      "content": "Crée des formulaires avec input, select, textarea et les différents types.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3028,
+    "fields": {
+      "module": 2007,
+      "title": "Défi: page de profil statique",
+      "lesson_type": "challenge",
+      "content": "Construis une page de profil complète avec bio, photo et liens.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3029,
+    "fields": {
+      "module": 2008,
+      "title": "Sélecteurs et propriétés CSS",
+      "lesson_type": "text",
+      "content": "Maîtrise les sélecteurs de base : class, id, élément, descendant.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3030,
+    "fields": {
+      "module": 2008,
+      "title": "Le modèle de boîte (Box Model)",
+      "lesson_type": "text",
+      "content": "Comprends margin, padding, border et comment ils influencent la mise en page.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3031,
+    "fields": {
+      "module": 2008,
+      "title": "Flexbox : alignement facile",
+      "lesson_type": "text",
+      "content": "Utilise Flexbox pour aligner et distribuer des éléments en ligne ou en colonne.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3032,
+    "fields": {
+      "module": 2008,
+      "title": "Défi: carte produit en CSS",
+      "lesson_type": "challenge",
+      "content": "Crée une carte produit stylisée en utilisant Flexbox et le Box Model.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3033,
+    "fields": {
+      "module": 2009,
+      "title": "Variables et fonctions JS",
+      "lesson_type": "text",
+      "content": "Déclare des variables avec let/const et crée tes premières fonctions.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3034,
+    "fields": {
+      "module": 2009,
+      "title": "Tableaux et objets JS",
+      "lesson_type": "text",
+      "content": "Manipule des collections de données avec arrays et objets JS.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3035,
+    "fields": {
+      "module": 2009,
+      "title": "Conditions et boucles JS",
+      "lesson_type": "text",
+      "content": "Reproduis en JS les structures de contrôle de flux déjà vues en Python.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3036,
+    "fields": {
+      "module": 2009,
+      "title": "Défi: calculatrice JS",
+      "lesson_type": "challenge",
+      "content": "Crée une calculatrice fonctionnelle avec addition, soustraction, multiplication.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3037,
+    "fields": {
+      "module": 2010,
+      "title": "Sélectionner des éléments du DOM",
+      "lesson_type": "text",
+      "content": "Utilise querySelector et getElementById pour cibler des éléments HTML.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3038,
+    "fields": {
+      "module": 2010,
+      "title": "Modifier le DOM dynamiquement",
+      "lesson_type": "text",
+      "content": "Change du texte, des styles et des attributs via JavaScript.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3039,
+    "fields": {
+      "module": 2010,
+      "title": "Gestion des événements",
+      "lesson_type": "text",
+      "content": "Réagis aux clics, touches clavier et soumissions de formulaires.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3040,
+    "fields": {
+      "module": 2010,
+      "title": "Défi: liste de tâches interactive",
+      "lesson_type": "challenge",
+      "content": "Crée une to-do list où l'on peut ajouter et supprimer des éléments.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3041,
+    "fields": {
+      "module": 2011,
+      "title": "Les media queries CSS",
+      "lesson_type": "text",
+      "content": "Adapte ton design selon la taille de l'écran avec les media queries.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3042,
+    "fields": {
+      "module": 2011,
+      "title": "CSS Grid pour les mises en page complexes",
+      "lesson_type": "text",
+      "content": "Maîtrise Grid pour créer des layouts en deux dimensions.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3043,
+    "fields": {
+      "module": 2011,
+      "title": "Unités relatives: rem, em, vw, vh",
+      "lesson_type": "text",
+      "content": "Comprends pourquoi les unités relatives rendent ton code plus flexible.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3044,
+    "fields": {
+      "module": 2011,
+      "title": "Défi: landing page responsive",
+      "lesson_type": "challenge",
+      "content": "Crée une page d'accueil qui s'adapte parfaitement au mobile et desktop.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3045,
+    "fields": {
+      "module": 2012,
+      "title": "Projet: page portfolio personnel",
+      "lesson_type": "challenge",
+      "content": "Construis un portfolio complet avec header, projets, et contact.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3046,
+    "fields": {
+      "module": 2012,
+      "title": "Projet: quiz interactif",
+      "lesson_type": "challenge",
+      "content": "Crée un quiz avec questions, options, score et récapitulatif final.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3047,
+    "fields": {
+      "module": 2012,
+      "title": "Projet: météo avec une API publique",
+      "lesson_type": "challenge",
+      "content": "Consomme l'API OpenWeatherMap et affiche la météo dynamiquement.",
+      "video_url": "",
+      "xp_reward": 40,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3048,
+    "fields": {
+      "module": 2012,
+      "title": "Quiz final: Web Frontend",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise du HTML, CSS et JavaScript de base.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3049,
+    "fields": {
+      "module": 2013,
+      "title": "Numpy: tableaux et opérations",
+      "lesson_type": "text",
+      "content": "Découvre Numpy pour manipuler des tableaux numériques efficacement.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3050,
+    "fields": {
+      "module": 2013,
+      "title": "Pandas: DataFrames et Series",
+      "lesson_type": "text",
+      "content": "Charge, explore et transforme des données tabulaires avec Pandas.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3051,
+    "fields": {
+      "module": 2013,
+      "title": "Lire des fichiers CSV et JSON",
+      "lesson_type": "text",
+      "content": "Importe des données depuis différents formats de fichiers.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3052,
+    "fields": {
+      "module": 2013,
+      "title": "Défi: analyse d'un jeu de données public",
+      "lesson_type": "challenge",
+      "content": "Charge un CSV et réponds à 5 questions sur les données.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3053,
+    "fields": {
+      "module": 2014,
+      "title": "Filtrer et trier des DataFrames",
+      "lesson_type": "text",
+      "content": "Sélectionne des lignes et colonnes selon des conditions complexes.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3054,
+    "fields": {
+      "module": 2014,
+      "title": "Groupby et agrégation",
+      "lesson_type": "text",
+      "content": "Regroupe des données et calcule des statistiques par catégorie.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3055,
+    "fields": {
+      "module": 2014,
+      "title": "Gérer les valeurs manquantes",
+      "lesson_type": "text",
+      "content": "Identifie et traite les NaN avec dropna, fillna et interpolation.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3056,
+    "fields": {
+      "module": 2014,
+      "title": "Défi: nettoyage d'un dataset sale",
+      "lesson_type": "challenge",
+      "content": "Nettoie un dataset avec valeurs manquantes et doublons.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3057,
+    "fields": {
+      "module": 2015,
+      "title": "Introduction à Matplotlib",
+      "lesson_type": "text",
+      "content": "Crée des graphiques de base: courbes, barres et nuages de points.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3058,
+    "fields": {
+      "module": 2015,
+      "title": "Graphiques avancés avec Seaborn",
+      "lesson_type": "text",
+      "content": "Visualise des distributions, corrélations et catégories avec Seaborn.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3059,
+    "fields": {
+      "module": 2015,
+      "title": "Bonnes pratiques de visualisation",
+      "lesson_type": "text",
+      "content": "Apprends à choisir le bon type de graphique selon tes données.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3060,
+    "fields": {
+      "module": 2015,
+      "title": "Défi: tableau de bord data",
+      "lesson_type": "challenge",
+      "content": "Crée un mini-dashboard avec 4 graphiques sur un dataset au choix.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3061,
+    "fields": {
+      "module": 2016,
+      "title": "Moyenne, médiane, écart-type",
+      "lesson_type": "text",
+      "content": "Mesure la tendance centrale et la dispersion de tes données.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3062,
+    "fields": {
+      "module": 2016,
+      "title": "Distributions et probabilités",
+      "lesson_type": "text",
+      "content": "Comprends loi normale, loi de Poisson et leurs applications.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3063,
+    "fields": {
+      "module": 2016,
+      "title": "Tests statistiques de base",
+      "lesson_type": "text",
+      "content": "Introduction aux tests t, chi-2 et à la notion de p-value.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3064,
+    "fields": {
+      "module": 2016,
+      "title": "Quiz: statistiques descriptives",
+      "lesson_type": "quiz",
+      "content": "Évalue ta compréhension des concepts statistiques clés.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3065,
+    "fields": {
+      "module": 2017,
+      "title": "C'est quoi le Machine Learning ?",
+      "lesson_type": "text",
+      "content": "Comprends la différence entre apprentissage supervisé, non supervisé et par renforcement.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3066,
+    "fields": {
+      "module": 2017,
+      "title": "Régression linéaire simple",
+      "lesson_type": "text",
+      "content": "Implémente ta première régression linéaire avec Scikit-learn.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3067,
+    "fields": {
+      "module": 2017,
+      "title": "Classification avec k-NN",
+      "lesson_type": "text",
+      "content": "Classifie des données avec l'algorithme des k plus proches voisins.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3068,
+    "fields": {
+      "module": 2017,
+      "title": "Défi: prédire le prix d'une maison",
+      "lesson_type": "challenge",
+      "content": "Utilise la régression linéaire sur un dataset immobilier.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3069,
+    "fields": {
+      "module": 2018,
+      "title": "Projet: analyse des ventes",
+      "lesson_type": "challenge",
+      "content": "Nettoie, analyse et visualise un dataset de ventes e-commerce.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3070,
+    "fields": {
+      "module": 2018,
+      "title": "Projet: segmentation client",
+      "lesson_type": "challenge",
+      "content": "Applique un clustering k-means sur des données clients.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3071,
+    "fields": {
+      "module": 2018,
+      "title": "Projet: rapport data complet",
+      "lesson_type": "challenge",
+      "content": "Produis un notebook Jupyter avec analyse narrative complète.",
+      "video_url": "",
+      "xp_reward": 40,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3072,
+    "fields": {
+      "module": 2018,
+      "title": "Quiz final: Data Science",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise du pipeline data complet.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3073,
+    "fields": {
+      "module": 2019,
+      "title": "Les principes fondateurs de la productivité",
+      "lesson_type": "text",
+      "content": "Découvre GTD, Deep Work et les frameworks qui ont fait leurs preuves.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3074,
+    "fields": {
+      "module": 2019,
+      "title": "La matrice d'Eisenhower",
+      "lesson_type": "text",
+      "content": "Apprends à classer tes tâches selon urgence et importance.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3075,
+    "fields": {
+      "module": 2019,
+      "title": "Identifier tes distracteurs principaux",
+      "lesson_type": "text",
+      "content": "Analyse honnêtement ce qui te vole le plus de temps chaque jour.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3076,
+    "fields": {
+      "module": 2019,
+      "title": "Défi: audit de ta journée type",
+      "lesson_type": "challenge",
+      "content": "Note chaque activité pendant 24h et identifie les temps perdus.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3077,
+    "fields": {
+      "module": 2020,
+      "title": "La technique Pomodoro",
+      "lesson_type": "text",
+      "content": "Travaille en sprints de 25 min entrecoupés de pauses courtes.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3078,
+    "fields": {
+      "module": 2020,
+      "title": "Time Blocking: planifier en blocs",
+      "lesson_type": "text",
+      "content": "Réserve des créneaux dédiés à chaque type de tâche.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3079,
+    "fields": {
+      "module": 2020,
+      "title": "Estimer correctement ses tâches",
+      "lesson_type": "text",
+      "content": "Combats le planning fallacy avec des techniques d'estimation réalistes.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3080,
+    "fields": {
+      "module": 2020,
+      "title": "Défi: semaine planifiée avec Time Blocking",
+      "lesson_type": "challenge",
+      "content": "Planifie 5 jours complets avec des blocs dédiés à chaque projet.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3081,
+    "fields": {
+      "module": 2021,
+      "title": "Le principe de l'inbox zéro",
+      "lesson_type": "text",
+      "content": "Vide et traite tes mails et notifications de façon systématique.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3082,
+    "fields": {
+      "module": 2021,
+      "title": "Créer un système de notes efficace",
+      "lesson_type": "text",
+      "content": "Découvre Zettelkasten, PARA et autres méthodes de prise de notes.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3083,
+    "fields": {
+      "module": 2021,
+      "title": "Organiser ses fichiers numériques",
+      "lesson_type": "text",
+      "content": "Structure ton ordinateur pour retrouver n'importe quel fichier en 10 secondes.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3084,
+    "fields": {
+      "module": 2021,
+      "title": "Défi: réorganiser ton bureau numérique",
+      "lesson_type": "challenge",
+      "content": "Classe tous tes fichiers en suivant la méthode PARA.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3085,
+    "fields": {
+      "module": 2022,
+      "title": "Rituels matinaux qui fonctionnent",
+      "lesson_type": "text",
+      "content": "Conçois une routine matinale adaptée à ta personnalité et tes objectifs.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3086,
+    "fields": {
+      "module": 2022,
+      "title": "La revue hebdomadaire",
+      "lesson_type": "text",
+      "content": "Prends 30 minutes chaque semaine pour faire le bilan et planifier.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3087,
+    "fields": {
+      "module": 2022,
+      "title": "Automatiser les tâches répétitives",
+      "lesson_type": "text",
+      "content": "Utilise des outils (Zapier, scripts) pour éliminer les tâches manuelles.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3088,
+    "fields": {
+      "module": 2022,
+      "title": "Défi: créer sa routine personnelle",
+      "lesson_type": "challenge",
+      "content": "Définis et teste une routine matin + soir pendant 5 jours.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3089,
+    "fields": {
+      "module": 2023,
+      "title": "Le travail en profondeur (Deep Work)",
+      "lesson_type": "text",
+      "content": "Comprends pourquoi le travail distrait est quasi inutile.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3090,
+    "fields": {
+      "module": 2023,
+      "title": "Gérer son énergie, pas son temps",
+      "lesson_type": "text",
+      "content": "Adapte tes tâches à ton niveau d'énergie selon les moments de la journée.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3091,
+    "fields": {
+      "module": 2023,
+      "title": "La règle des 2 minutes",
+      "lesson_type": "text",
+      "content": "Si une tâche prend moins de 2 minutes, fais-la maintenant.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3092,
+    "fields": {
+      "module": 2023,
+      "title": "Quiz: gestion du focus et de l'énergie",
+      "lesson_type": "quiz",
+      "content": "Teste ta compréhension des principes de Deep Work.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3093,
+    "fields": {
+      "module": 2024,
+      "title": "Projet: système de productivité personnel complet",
+      "lesson_type": "challenge",
+      "content": "Combine Time Blocking, revue hebdo et routines en un seul système.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3094,
+    "fields": {
+      "module": 2024,
+      "title": "Projet: tableau de bord de tes objectifs",
+      "lesson_type": "challenge",
+      "content": "Crée un tracker hebdomadaire de tes objectifs principaux.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3095,
+    "fields": {
+      "module": 2024,
+      "title": "Projet: automatiser ta morning routine",
+      "lesson_type": "challenge",
+      "content": "Écris un script ou checklist automatisée pour ta matinée.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3096,
+    "fields": {
+      "module": 2024,
+      "title": "Quiz final: Productivité",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise des systèmes et outils de productivité.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3097,
+    "fields": {
+      "module": 2025,
+      "title": "D'où viennent les idées ?",
+      "lesson_type": "text",
+      "content": "Explore les sources d'inspiration : expériences, observations, questions.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3098,
+    "fields": {
+      "module": 2025,
+      "title": "Le brainstorming créatif",
+      "lesson_type": "text",
+      "content": "Techniques pour générer un maximum d'idées sans censure.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3099,
+    "fields": {
+      "module": 2025,
+      "title": "Transformer une idée en concept",
+      "lesson_type": "text",
+      "content": "Passe d'une intuition vague à une prémisse d'histoire claire.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3100,
+    "fields": {
+      "module": 2025,
+      "title": "Défi: 10 idées en 10 minutes",
+      "lesson_type": "challenge",
+      "content": "Génère 10 concepts d'histoires radicalement différents.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3101,
+    "fields": {
+      "module": 2026,
+      "title": "Créer un personnage crédible",
+      "lesson_type": "text",
+      "content": "Donne vie à un personnage avec motivations, peurs et contradictions.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3102,
+    "fields": {
+      "module": 2026,
+      "title": "L'arc narratif du personnage",
+      "lesson_type": "text",
+      "content": "Définis comment ton personnage évolue du début à la fin.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3103,
+    "fields": {
+      "module": 2026,
+      "title": "La voix narrative",
+      "lesson_type": "text",
+      "content": "Distingue la voix de l'auteur de celle du personnage narrateur.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3104,
+    "fields": {
+      "module": 2026,
+      "title": "Défi: fiche de personnage complète",
+      "lesson_type": "challenge",
+      "content": "Crée une fiche détaillée pour un personnage principal.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3105,
+    "fields": {
+      "module": 2027,
+      "title": "Les 3 actes classiques",
+      "lesson_type": "text",
+      "content": "Comprends la structure exposition-confrontation-résolution.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3106,
+    "fields": {
+      "module": 2027,
+      "title": "Le conflit: moteur de l'histoire",
+      "lesson_type": "text",
+      "content": "Découvre les 4 types de conflits : interne, interpersonnel, sociétal, naturel.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3107,
+    "fields": {
+      "module": 2027,
+      "title": "Les retournements de situation",
+      "lesson_type": "text",
+      "content": "Apprends à placer des twists crédibles et surprenants.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3108,
+    "fields": {
+      "module": 2027,
+      "title": "Défi: plan d'intrigue en 9 cases",
+      "lesson_type": "challenge",
+      "content": "Utilise le Story Grid pour planifier ton histoire en 9 cases.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3109,
+    "fields": {
+      "module": 2028,
+      "title": "À quoi sert vraiment un dialogue ?",
+      "lesson_type": "text",
+      "content": "Un dialogue révèle le caractère, fait avancer l'intrigue ou crée de la tension.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3110,
+    "fields": {
+      "module": 2028,
+      "title": "Écrire des dialogues naturels",
+      "lesson_type": "text",
+      "content": "Évite les dialogues informatifs et crée des échanges tendus et vraisemblables.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3111,
+    "fields": {
+      "module": 2028,
+      "title": "Sous-texte et non-dit",
+      "lesson_type": "text",
+      "content": "Apprends à communiquer ce qu'un personnage ne dit pas vraiment.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3112,
+    "fields": {
+      "module": 2028,
+      "title": "Défi: scène de dialogue de 300 mots",
+      "lesson_type": "challenge",
+      "content": "Écris une scène de dialogue entre deux personnages en conflit.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3113,
+    "fields": {
+      "module": 2029,
+      "title": "Trouver son style d'écriture",
+      "lesson_type": "text",
+      "content": "Découvre ta voix en analysant les auteurs qui t'influencent.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3114,
+    "fields": {
+      "module": 2029,
+      "title": "L'art de la réécriture",
+      "lesson_type": "text",
+      "content": "Comprends pourquoi écrire et réécrire sont deux compétences distinctes.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3115,
+    "fields": {
+      "module": 2029,
+      "title": "Show, don't tell",
+      "lesson_type": "text",
+      "content": "Apprends à montrer les émotions et états d'âme plutôt que les nommer.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3116,
+    "fields": {
+      "module": 2029,
+      "title": "Quiz: style et technique narrative",
+      "lesson_type": "quiz",
+      "content": "Teste ta maîtrise des principes stylistiques.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3117,
+    "fields": {
+      "module": 2030,
+      "title": "Projet: nouvelle courte complète",
+      "lesson_type": "challenge",
+      "content": "Écris une nouvelle de 500 mots avec personnage, conflit et résolution.",
+      "video_url": "",
+      "xp_reward": 40,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3118,
+    "fields": {
+      "module": 2030,
+      "title": "Projet: réécrire une scène célèbre",
+      "lesson_type": "challenge",
+      "content": "Réécris une scène d'un roman classique dans ton propre style.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3119,
+    "fields": {
+      "module": 2030,
+      "title": "Projet: premier chapitre de roman",
+      "lesson_type": "challenge",
+      "content": "Écris le premier chapitre de ton futur roman avec hook et présentation du monde.",
+      "video_url": "",
+      "xp_reward": 45,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3120,
+    "fields": {
+      "module": 2030,
+      "title": "Quiz final: Écriture Créative",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise de la narration et du style.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3121,
+    "fields": {
+      "module": 2031,
+      "title": "C'est quoi l'argent ?",
+      "lesson_type": "text",
+      "content": "Comprends la nature de la monnaie, l'inflation et le pouvoir d'achat.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3122,
+    "fields": {
+      "module": 2031,
+      "title": "Revenus actifs vs revenus passifs",
+      "lesson_type": "text",
+      "content": "Distingue le revenu de ton travail du revenu de tes actifs.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3123,
+    "fields": {
+      "module": 2031,
+      "title": "Le bilan personnel",
+      "lesson_type": "text",
+      "content": "Calcule ta valeur nette : actifs - passifs = patrimoine net.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3124,
+    "fields": {
+      "module": 2031,
+      "title": "Défi: établir ton bilan financier",
+      "lesson_type": "challenge",
+      "content": "Liste tous tes actifs et passifs et calcule ton patrimoine net.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3125,
+    "fields": {
+      "module": 2032,
+      "title": "La règle des 50-30-20",
+      "lesson_type": "text",
+      "content": "Alloue 50% aux besoins, 30% aux envies, 20% à l'épargne.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3126,
+    "fields": {
+      "module": 2032,
+      "title": "Tracker ses dépenses",
+      "lesson_type": "text",
+      "content": "Méthodes pour suivre chaque euro dépensé sans se décourager.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3127,
+    "fields": {
+      "module": 2032,
+      "title": "Réduire les dépenses sans souffrir",
+      "lesson_type": "text",
+      "content": "Identifie les postes de dépenses inutiles à couper en premier.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3128,
+    "fields": {
+      "module": 2032,
+      "title": "Défi: créer son budget mensuel",
+      "lesson_type": "challenge",
+      "content": "Établis un budget réaliste pour le mois prochain.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3129,
+    "fields": {
+      "module": 2033,
+      "title": "L'épargne de précaution",
+      "lesson_type": "text",
+      "content": "Constitue un fonds d'urgence couvrant 3 à 6 mois de dépenses.",
+      "video_url": "",
+      "xp_reward": 10,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3130,
+    "fields": {
+      "module": 2033,
+      "title": "Se payer en premier",
+      "lesson_type": "text",
+      "content": "Vire automatiquement un % de tes revenus dès leur réception.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3131,
+    "fields": {
+      "module": 2033,
+      "title": "Les intérêts composés expliqués",
+      "lesson_type": "text",
+      "content": "Comprends la puissance de l'effet boule de neige financier.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3132,
+    "fields": {
+      "module": 2033,
+      "title": "Défi: simuler ton épargne sur 10 ans",
+      "lesson_type": "challenge",
+      "content": "Calcule combien tu auras en épargnant X euros/mois avec Y % d'intérêts.",
+      "video_url": "",
+      "xp_reward": 25,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3133,
+    "fields": {
+      "module": 2034,
+      "title": "Actions, obligations, immobilier: les bases",
+      "lesson_type": "text",
+      "content": "Comprends les grandes classes d'actifs et leurs caractéristiques.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3134,
+    "fields": {
+      "module": 2034,
+      "title": "ETF et fonds indiciels",
+      "lesson_type": "text",
+      "content": "Découvre pourquoi investir dans le marché global est souvent plus rentable.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3135,
+    "fields": {
+      "module": 2034,
+      "title": "Risque et diversification",
+      "lesson_type": "text",
+      "content": "Comprends pourquoi ne pas mettre tous ses oeufs dans le même panier.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3136,
+    "fields": {
+      "module": 2034,
+      "title": "Défi: construire un portefeuille fictif",
+      "lesson_type": "challenge",
+      "content": "Alloue 10 000€ fictifs dans différents actifs en justifiant tes choix.",
+      "video_url": "",
+      "xp_reward": 30,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3137,
+    "fields": {
+      "module": 2035,
+      "title": "Les biais cognitifs financiers",
+      "lesson_type": "text",
+      "content": "Découvre FOMO, biais de confirmation et ancrage qui sabotent tes décisions.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3138,
+    "fields": {
+      "module": 2035,
+      "title": "La mentalité de croissance financière",
+      "lesson_type": "text",
+      "content": "Différencie la mentalité de pénurie de la mentalité d'abondance.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3139,
+    "fields": {
+      "module": 2035,
+      "title": "Dépenses émotionnelles",
+      "lesson_type": "text",
+      "content": "Identifie quand et pourquoi tu dépenses par émotion plutôt que par besoin.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3140,
+    "fields": {
+      "module": 2035,
+      "title": "Quiz: psychologie de l'argent",
+      "lesson_type": "quiz",
+      "content": "Teste ta connaissance des comportements financiers irrationnels.",
+      "video_url": "",
+      "xp_reward": 15,
+      "order": 4
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3141,
+    "fields": {
+      "module": 2036,
+      "title": "Projet: plan financier personnel sur 12 mois",
+      "lesson_type": "challenge",
+      "content": "Rédige un plan complet : budget, épargne, objectif et investissement.",
+      "video_url": "",
+      "xp_reward": 40,
+      "order": 1
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3142,
+    "fields": {
+      "module": 2036,
+      "title": "Projet: analyse d'un investissement réel",
+      "lesson_type": "challenge",
+      "content": "Analyse les performances d'un ETF réel sur les 5 dernières années.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 2
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3143,
+    "fields": {
+      "module": 2036,
+      "title": "Projet: calcul de ta retraite anticipée",
+      "lesson_type": "challenge",
+      "content": "Utilise la règle des 4% pour calculer ton objectif FIRE.",
+      "video_url": "",
+      "xp_reward": 35,
+      "order": 3
+    }
+  },
+  {
+    "model": "learning.lesson",
+    "pk": 3144,
+    "fields": {
+      "module": 2036,
+      "title": "Quiz final: Finance Personnelle",
+      "lesson_type": "quiz",
+      "content": "Évalue ta maîtrise de la gestion financière personnelle.",
+      "video_url": "",
+      "xp_reward": 20,
+      "order": 4
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4001,
+    "fields": {
+      "title": "Écris une fonction factorielle",
+      "description": "Implémente la factorielle de n de façon récursive et itérative.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4002,
+    "fields": {
+      "title": "Inverser une chaîne de caractères",
+      "description": "Écris une fonction qui retourne une chaîne à l'envers sans utiliser slice.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4003,
+    "fields": {
+      "title": "FizzBuzz classique",
+      "description": "Affiche les nombres de 1 à 100 : Fizz pour multiples de 3, Buzz pour 5.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4004,
+    "fields": {
+      "title": "Compter les voyelles d'un texte",
+      "description": "Écris une fonction qui compte le nombre de voyelles dans une phrase donnée.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4005,
+    "fields": {
+      "title": "Trouver les doublons dans une liste",
+      "description": "Retourne tous les éléments qui apparaissent plus d'une fois dans une liste.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4006,
+    "fields": {
+      "title": "Calculateur d'IMC",
+      "description": "Crée une fonction qui calcule et interprète l'Indice de Masse Corporelle.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4007,
+    "fields": {
+      "title": "Convertisseur Celsius/Fahrenheit",
+      "description": "Écris deux fonctions de conversion de température dans les deux sens.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4008,
+    "fields": {
+      "title": "Palindrome ou pas ?",
+      "description": "Vérifie si un mot est un palindrome (identique à l'envers).",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4009,
+    "fields": {
+      "title": "La suite de Fibonacci",
+      "description": "Génère les n premiers nombres de la suite de Fibonacci.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4010,
+    "fields": {
+      "title": "Mini-calculateur de notes",
+      "description": "Calcule la moyenne, note max et note min d'une liste de notes.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4011,
+    "fields": {
+      "title": "Bouton qui change de couleur au clic",
+      "description": "Utilise JS pour modifier le style d'un élément à chaque clic.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4012,
+    "fields": {
+      "title": "Formulaire de validation côté client",
+      "description": "Vérifie qu'un email est valide et qu'un mot de passe fait 8+ caractères.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4013,
+    "fields": {
+      "title": "Afficher l'heure en temps réel",
+      "description": "Mets à jour une horloge HTML chaque seconde avec setInterval.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4014,
+    "fields": {
+      "title": "Créer un accordéon HTML/CSS/JS",
+      "description": "Affiche/masque du contenu au clic sur un titre, sans bibliothèque.",
+      "pack": null,
+      "xp_reward": 55,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4015,
+    "fields": {
+      "title": "Dark mode toggle",
+      "description": "Ajoute un bouton qui bascule entre thème clair et sombre.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4016,
+    "fields": {
+      "title": "Barre de progression animée",
+      "description": "Anime une barre qui se remplit de 0% à 100% en 3 secondes.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4017,
+    "fields": {
+      "title": "Galerie d'images avec lightbox",
+      "description": "Ouvre une image en plein écran au clic avec un overlay sombre.",
+      "pack": null,
+      "xp_reward": 60,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4018,
+    "fields": {
+      "title": "Compteur de clics avec reset",
+      "description": "Crée un compteur qui s'incrémente et peut être remis à zéro.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4019,
+    "fields": {
+      "title": "Filtre de liste en temps réel",
+      "description": "Filtre une liste de mots selon ce que l'utilisateur tape dans un input.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4020,
+    "fields": {
+      "title": "Fetch API: afficher des blagues",
+      "description": "Consomme l'API JokeAPI et affiche une blague aléatoire.",
+      "pack": null,
+      "xp_reward": 55,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4021,
+    "fields": {
+      "title": "Calcule la médiane sans bibliothèque",
+      "description": "Implémente le calcul de la médiane en Python pur.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4022,
+    "fields": {
+      "title": "Détecte les outliers d'un dataset",
+      "description": "Utilise la méthode IQR pour identifier les valeurs aberrantes.",
+      "pack": null,
+      "xp_reward": 55,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4023,
+    "fields": {
+      "title": "Trace une courbe de tendance",
+      "description": "Ajoute une régression linéaire sur un nuage de points Matplotlib.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4024,
+    "fields": {
+      "title": "Compter les mots d'un corpus",
+      "description": "Calcule la fréquence des mots dans un texte et affiche les 10 plus fréquents.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4025,
+    "fields": {
+      "title": "Normaliser un dataset",
+      "description": "Applique la normalisation Min-Max sur toutes les colonnes numériques.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4026,
+    "fields": {
+      "title": "Créer un heatmap de corrélation",
+      "description": "Visualise la matrice de corrélation d'un DataFrame avec Seaborn.",
+      "pack": null,
+      "xp_reward": 55,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4027,
+    "fields": {
+      "title": "Encoder des variables catégorielles",
+      "description": "Transforme des colonnes texte en variables numériques avec LabelEncoder.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4028,
+    "fields": {
+      "title": "Analyser la distribution d'une variable",
+      "description": "Trace histogramme + KDE et commente la forme de la distribution.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4029,
+    "fields": {
+      "title": "Créer un modèle de régression logistique",
+      "description": "Classe des emails spam/non-spam avec sklearn.",
+      "pack": null,
+      "xp_reward": 65,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4030,
+    "fields": {
+      "title": "Évaluer un modèle avec la matrice de confusion",
+      "description": "Calcule accuracy, précision et recall pour un modèle de classification.",
+      "pack": null,
+      "xp_reward": 60,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4031,
+    "fields": {
+      "title": "Note les 3 tâches les plus importantes du jour",
+      "description": "Identifie les 3 tâches qui auront le plus d'impact aujourd'hui.",
+      "pack": null,
+      "xp_reward": 20,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4032,
+    "fields": {
+      "title": "Fais un Pomodoro complet",
+      "description": "Travaille 25 minutes sans interruption sur une seule tâche.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4033,
+    "fields": {
+      "title": "Vide ta boîte mail",
+      "description": "Atteins l'inbox zéro en archivant, répondant ou supprimant chaque mail.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4034,
+    "fields": {
+      "title": "Planifie ta semaine en blocs",
+      "description": "Remplis un agenda avec des blocs de 90 minutes pour chaque projet.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4035,
+    "fields": {
+      "title": "Identifie ton heure de pic d'énergie",
+      "description": "Note pendant 3 jours ton niveau d'énergie toutes les 2h.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4036,
+    "fields": {
+      "title": "Crée un système de fichiers en 4 dossiers",
+      "description": "Organise tout ton bureau en Projects, Areas, Resources, Archives.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4037,
+    "fields": {
+      "title": "Écris ta revue hebdomadaire",
+      "description": "Analyse la semaine : victoires, apprentissages, points à améliorer.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4038,
+    "fields": {
+      "title": "Définis 1 objectif SMART pour ce mois",
+      "description": "Rédige un objectif Spécifique, Mesurable, Atteignable, Réaliste, Temporel.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4039,
+    "fields": {
+      "title": "Supprime une notification inutile",
+      "description": "Désactive les notifications qui n'apportent aucune valeur.",
+      "pack": null,
+      "xp_reward": 15,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4040,
+    "fields": {
+      "title": "Prépare demain en 10 minutes ce soir",
+      "description": "Liste les 3 tâches prioritaires et les outils nécessaires pour demain.",
+      "pack": null,
+      "xp_reward": 20,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4041,
+    "fields": {
+      "title": "Écris une scène d'ouverture percutante",
+      "description": "Commence une histoire avec une première ligne qui donne envie de lire.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4042,
+    "fields": {
+      "title": "Décris un lieu en 100 mots",
+      "description": "Rends un environnement vivant avec des détails sensoriels précis.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4043,
+    "fields": {
+      "title": "Réécris une scène en changeant le point de vue",
+      "description": "Prends une scène et raconte-la depuis le point de vue du méchant.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4044,
+    "fields": {
+      "title": "Écris un dialogue sans verbe de parole",
+      "description": "Remplace 'dit-il' par des actions et des gestes.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4045,
+    "fields": {
+      "title": "Crée un personnage en 5 contradictions",
+      "description": "Définis un personnage par 5 traits contradictoires qui le rendent humain.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4046,
+    "fields": {
+      "title": "Écris la même scène en 50 puis 500 mots",
+      "description": "Explore comment la longueur change le rythme et l'impact.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4047,
+    "fields": {
+      "title": "Invente un monde en 3 règles",
+      "description": "Crée un univers de fiction avec 3 règles qui le différencient du monde réel.",
+      "pack": null,
+      "xp_reward": 40,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4048,
+    "fields": {
+      "title": "Lettre d'un personnage à son ennemi",
+      "description": "Écris une lettre que ton personnage principal adresserait à son antagoniste.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4049,
+    "fields": {
+      "title": "Cliffhanger de fin de chapitre",
+      "description": "Écris la dernière phrase d'un chapitre qui donne envie de continuer.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4050,
+    "fields": {
+      "title": "Décris une émotion sans la nommer",
+      "description": "Montre la peur, la joie ou la colère uniquement par des actions physiques.",
+      "pack": null,
+      "xp_reward": 50,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4051,
+    "fields": {
+      "title": "Calcule ton taux d'épargne actuel",
+      "description": "Divise ton épargne mensuelle par tes revenus nets et exprime en %.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4052,
+    "fields": {
+      "title": "Liste tes 5 plus grosses dépenses du mois",
+      "description": "Analyse honnêtement tes 5 postes de dépenses principaux.",
+      "pack": null,
+      "xp_reward": 20,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4053,
+    "fields": {
+      "title": "Simule l'effet des intérêts composés sur 20 ans",
+      "description": "Calcule ce que donnent 100€/mois à 7% sur 20 ans.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4054,
+    "fields": {
+      "title": "Recherche les frais cachés de ton compte bancaire",
+      "description": "Liste tous les frais que ta banque prélève automatiquement.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4055,
+    "fields": {
+      "title": "Crée ton fonds d'urgence virtuel",
+      "description": "Calcule le montant exact de ton fonds d'urgence idéal (3 mois de dépenses).",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4056,
+    "fields": {
+      "title": "Compare deux ETF populaires",
+      "description": "Compare S&P 500 et MSCI World sur 5 ans : performance et frais.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4057,
+    "fields": {
+      "title": "Identifie 3 dépenses à éliminer",
+      "description": "Trouve 3 abonnements ou dépenses récurrentes dont tu pourrais te passer.",
+      "pack": null,
+      "xp_reward": 20,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4058,
+    "fields": {
+      "title": "Calcule le coût réel d'un achat impulsif",
+      "description": "Convertis une dépense en heures de travail nécessaires pour la financer.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4059,
+    "fields": {
+      "title": "Définis ton objectif financier à 5 ans",
+      "description": "Écris un objectif financier précis et le plan en 3 étapes pour l'atteindre.",
+      "pack": null,
+      "xp_reward": 35,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4060,
+    "fields": {
+      "title": "Explique les intérêts composés à un enfant",
+      "description": "Rédige une explication simple et illustrée de la puissance des intérêts composés.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4061,
+    "fields": {
+      "title": "Automatise une tâche répétitive avec Python",
+      "description": "Identifie une tâche que tu fais souvent et écris un script pour l'automatiser.",
+      "pack": null,
+      "xp_reward": 70,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4062,
+    "fields": {
+      "title": "Crée un mini-dashboard de tes objectifs en HTML",
+      "description": "Visualise tes 3 objectifs du mois avec des barres de progression HTML/CSS.",
+      "pack": null,
+      "xp_reward": 65,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4063,
+    "fields": {
+      "title": "Analyse tes dépenses avec Pandas",
+      "description": "Importe un CSV de tes dépenses et calcule des stats par catégorie.",
+      "pack": null,
+      "xp_reward": 70,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4064,
+    "fields": {
+      "title": "Écris un article de blog de 500 mots",
+      "description": "Rédige un article complet sur un sujet qui te passionne.",
+      "pack": null,
+      "xp_reward": 60,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4065,
+    "fields": {
+      "title": "Crée un budget prévisionnel en Python",
+      "description": "Écris un script qui projette ton épargne sur 12 mois.",
+      "pack": null,
+      "xp_reward": 65,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4066,
+    "fields": {
+      "title": "Construis un système de revue mensuelle",
+      "description": "Conçois un template pour faire le bilan de chaque mois.",
+      "pack": null,
+      "xp_reward": 45,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4067,
+    "fields": {
+      "title": "Visualise ta progression financière",
+      "description": "Crée un graphique de ton évolution de patrimoine.",
+      "pack": null,
+      "xp_reward": 55,
+      "deadline": null,
+      "is_daily": false
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4068,
+    "fields": {
+      "title": "Histoire en 6 mots",
+      "description": "Écris la meilleure histoire possible en exactement 6 mots.",
+      "pack": null,
+      "xp_reward": 25,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4069,
+    "fields": {
+      "title": "Médite 10 minutes et note tes insights",
+      "description": "Pratique une méditation de focus et note ce que tu as réalisé.",
+      "pack": null,
+      "xp_reward": 20,
+      "deadline": null,
+      "is_daily": true
+    }
+  },
+  {
+    "model": "practice.mission",
+    "pk": 4070,
+    "fields": {
+      "title": "Partage une technique apprise cette semaine",
+      "description": "Explique en 3 paragraphes une compétence que tu viens d'acquérir.",
+      "pack": null,
+      "xp_reward": 30,
+      "deadline": null,
+      "is_daily": true
+    }
+  }
+]

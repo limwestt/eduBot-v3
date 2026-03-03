@@ -1,0 +1,74 @@
+<aside class="w-64 bg-gray-900/80 border-r border-gray-800 flex flex-col p-4 space-y-2 hidden lg:flex">
+
+  <!-- Logo -->
+  <div class="flex items-center gap-3 px-4 py-3 mb-6">
+    <div class="w-8 h-8 rounded bg-brandMain flex items-center justify-center font-bold text-white">E</div>
+    <span class="text-xl font-bold text-white">EduBot <span class="text-brandGlow">V3</span></span>
+  </div>
+
+  <!-- Navigation -->
+  {% with request.resolver_match.url_name as current %}
+  <nav class="space-y-2 flex-1">
+
+    <!-- Dashboard -->
+    <a href="{% url 'learning:dashboard' %}"
+       class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all
+              {% if current == 'dashboard' %}bg-brandMain/10 text-brandGlow border border-brandMain/20{% else %}text-gray-400 hover:bg-gray-800/60 hover:text-white border border-transparent{% endif %}">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+      </svg>
+      Dashboard
+    </a>
+
+    <!-- Packs de compétences -->
+    <a href="{% url 'learning:pack_list' %}"
+       class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all
+              {% if current == 'pack_list' or current == 'pack_detail' or current == 'lesson_detail' %}bg-brandMain/10 text-brandGlow border border-brandMain/20{% else %}text-gray-400 hover:bg-gray-800/60 hover:text-white border border-transparent{% endif %}">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+      </svg>
+      Packs de compétences
+    </a>
+
+    <!-- Missions -->
+    <a href="{% url 'practice:mission_list' %}"
+       class="w-full flex items-center gap-3 px-4 py-3 rounded-xl font-medium transition-all
+              {% if current == 'mission_list' or current == 'mission_detail' %}bg-brandMain/10 text-brandGlow border border-brandMain/20{% else %}text-gray-400 hover:bg-gray-800/60 hover:text-white border border-transparent{% endif %}">
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+      Missions
+    </a>
+
+  </nav>
+  {% endwith %}
+
+  <!-- Streak + XP Bar -->
+  <div class="mt-auto px-4 py-4 bg-gray-800/50 rounded-xl border border-gray-700">
+
+    <!-- Streak -->
+    <div class="flex items-center justify-between mb-3">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-orange-400 font-bold text-sm">
+          {{ request.user.profile.streak_days }} jour{{ request.user.profile.streak_days|pluralize }}
+        </span>
+      </div>
+      <span class="text-gray-500 text-xs">streak</span>
+    </div>
+
+    <!-- XP Bar -->
+    <div class="flex justify-between text-xs text-gray-400 mb-2">
+      <span>{{ request.user.profile.level_display }}</span>
+      <span>{{ request.user.profile.xp }} XP</span>
+    </div>
+    <div class="w-full bg-gray-700 rounded-full h-1.5">
+      <div class="bg-brandMain h-1.5 rounded-full transition-all"
+           style="width: {{ request.user.profile.xp_percent }}%"></div>
+    </div>
+
+  </div>
+
+</aside>

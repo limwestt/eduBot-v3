@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Packs de Compétences — EduBot V3{% endblock %}
+
+{% block content %}
+
+  <div class="flex justify-between items-end mb-8">
+    <div>
+      <h1 class="text-3xl font-bold">Packs de Compétences</h1>
+      <p class="text-gray-400 mt-2">Choisis ton prochain domaine à maîtriser</p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+    {% for item in packs_with_progress %}
+    <a href="{% url 'learning:pack_detail' item.pack.slug %}"
+       class="bg-gray-900 border border-gray-800 rounded-2xl p-6 group hover:border-brandMain/50 hover:-translate-y-1 transition-all flex flex-col">
+      
+      <div class="flex justify-between items-start mb-5">
+        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-700">
+          {{ item.pack.get_difficulty_display }}
+        </span>
+        <span class="text-brandGlow font-bold text-sm">+{{ item.pack.xp_reward }} XP</span>
+      </div>
+
+      <h3 class="font-bold text-xl mb-3 group-hover:text-brandGlow transition-colors">
+        {{ item.pack.title }}
+      </h3>
+      <p class="text-gray-400 text-sm mb-6 flex-1">
+        {{ item.pack.description|truncatechars:120 }}
+      </p>
+
+      <!-- Barre de progression -->
+      <div class="mt-auto">
+        <div class="flex justify-between text-xs text-gray-500 mb-2">
+          <span>Progression</span>
+          <span class="text-brandGlow font-medium">{{ item.progress }}%</span>
+        </div>
+        <div class="w-full bg-gray-800 rounded-full h-2">
+          <div class="bg-brandMain h-2 rounded-full transition-all"
+               style="width: {{ item.progress }}%"></div>
+        </div>
+      </div>
+    </a>
+    {% empty %}
+    <div class="col-span-full text-center py-20">
+      <p class="text-gray-500">Aucun pack disponible pour le moment.</p>
+    </div>
+    {% endfor %}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,240 @@
+{% extends "base.html" %}
+{% block title %}{{ mission.title }} — EduBot V3{% endblock %}
+
+
+{% block content %}
+
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+    <a href="{% url 'practice:mission_list' %}" class="hover:text-white transition-colors">Missions</a>
+    <span>/</span>
+    <span class="text-white">{{ mission.title }}</span>
+  </nav>
+
+  <div class="max-w-3xl">
+
+    <!-- En-tête -->
+    <div class="flex justify-between items-start mb-6 flex-wrap gap-4">
+      <div>
+        {% if mission.is_daily %}
+          <span class="px-3 py-1 bg-brandMain/20 border border-brandMain/30 text-brandGlow text-xs rounded-full font-medium mb-3 inline-block">
+            Défi du Jour
+          </span>
+        {% endif %}
+        <h1 class="text-3xl font-bold">{{ mission.title }}</h1>
+      </div>
+      <div class="flex items-center gap-2 bg-brandMain/10 border border-brandMain/20 rounded-xl px-4 py-2">
+        <svg class="w-5 h-5 text-brandGlow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <span class="text-brandGlow font-bold">+{{ mission.xp_reward }} XP</span>
+      </div>
+    </div>
+
+    <!-- Consigne -->
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 mb-6">
+      <h2 class="text-lg font-bold mb-3">Consigne</h2>
+      <p class="text-gray-300 leading-relaxed">{{ mission.description }}</p>
+    </div>
+
+    <!-- ── Mission déjà complétée ── -->
+    {% if user_mission.status == 'completed' %}
+    <div class="bg-green-900/20 border border-green-500/30 rounded-2xl p-6">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
+          <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="font-bold text-green-400">Mission complétée !</p>
+          <p class="text-gray-500 text-sm">+{{ user_mission.xp_awarded }} XP gagnés</p>
+        </div>
+      </div>
+      {% if user_mission.submitted_answer %}
+      <div class="bg-gray-900/50 rounded-xl p-4">
+        <p class="text-xs text-gray-500 mb-2">Ta réponse :</p>
+        <p class="text-gray-300 text-sm">{{ user_mission.submitted_answer }}</p>
+      </div>
+      {% endif %}
+    </div>
+
+    {% else %}
+    <!-- ── Formulaire de réponse ── -->
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-6" id="form-zone">
+      <h2 class="text-lg font-bold mb-4">Ta réponse</h2>
+      <textarea id="answer-input" rows="6"
+        class="w-full bg-gray-800 border border-gray-700 text-white rounded-xl p-4 text-sm font-mono resize-none focus:outline-none focus:border-brandMain focus:ring-1 focus:ring-brandMain transition-all"
+        placeholder="Écris ta réponse ici..."></textarea>
+
+      <div class="flex justify-between items-center mt-4">
+        <p class="text-gray-500 text-sm">Soumets ta réponse pour une correction IA instantanée.</p>
+        <button onclick="submitMission('{% url 'practice:submit_mission' mission.id %}')"
+                id="submit-btn"
+                class="bg-brandMain hover:bg-brandMain/80 text-white px-6 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+          </svg>
+          Soumettre
+        </button>
+      </div>
+    </div>
+
+    <!-- ── Résultat IA (injecté dynamiquement) ── -->
+    <div id="ai-result" class="hidden mt-6 rounded-2xl border p-6 transition-all">
+
+      <!-- Score + statut -->
+      <div class="flex items-center gap-5 mb-5">
+        <div id="ai-score-circle"
+             class="w-20 h-20 rounded-full flex flex-col items-center justify-center border-4 flex-shrink-0">
+          <span id="ai-score-number" class="text-2xl font-extrabold leading-none"></span>
+          <span class="text-xs text-gray-400">/100</span>
+        </div>
+        <div>
+          <p id="ai-status-label" class="font-bold text-lg"></p>
+          <p id="ai-feedback" class="text-gray-300 text-sm mt-1 leading-relaxed"></p>
+        </div>
+      </div>
+
+      <!-- Améliorations -->
+      <div id="ai-improvements-block" class="border-t border-gray-700 pt-4 hidden">
+        <p class="text-gray-400 text-sm font-semibold mb-3">Points à améliorer :</p>
+        <ul id="ai-improvements-list" class="space-y-2"></ul>
+      </div>
+
+      <!-- Bouton réessayer si échec -->
+      <div id="retry-block" class="hidden mt-5">
+        <button onclick="resetForm()"
+                class="w-full border border-gray-700 hover:border-brandMain text-gray-300 hover:text-white px-4 py-3 rounded-xl text-sm font-semibold transition-all">
+          🔄 Réessayer avec une nouvelle réponse
+        </button>
+      </div>
+    </div>
+
+    {% endif %}
+
+  </div>
+
+  <!-- Toast XP -->
+  <div id="xp-toast"
+       class="fixed bottom-6 right-6 bg-brandMain text-white px-6 py-4 rounded-2xl shadow-2xl font-bold text-lg hidden flex items-center gap-3 z-50">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+    </svg>
+    <span id="xp-message"></span>
+  </div>
+
+{% endblock %}
+
+
+{% block extra_scripts %}
+<script>
+  function submitMission(url) {
+    const answer = document.getElementById('answer-input').value.trim();
+    if (!answer) {
+      alert('Écris une réponse avant de soumettre.');
+      return;
+    }
+
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = true;
+    btn.innerHTML = `
+      <svg class="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+      </svg>
+      Correction en cours...
+    `;
+
+    const formData = new FormData();
+    formData.append('answer', answer);
+    formData.append('csrfmiddlewaretoken', '{{ csrf_token }}');
+
+    fetch(url, { method: 'POST', body: formData })
+      .then(res => res.json())
+      .then(data => {
+        if (data.status === 'ok' || data.status === 'failed') {
+          showAiResult(data);
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Soumettre';
+          alert('Erreur lors de la soumission. Réessaie.');
+        }
+      })
+      .catch(() => {
+        btn.disabled = false;
+        btn.textContent = 'Soumettre';
+        alert('Erreur réseau. Vérifie ta connexion.');
+      });
+  }
+
+  function showAiResult(data) {
+    const box      = document.getElementById('ai-result');
+    const circle   = document.getElementById('ai-score-circle');
+    const scoreNum = document.getElementById('ai-score-number');
+    const label    = document.getElementById('ai-status-label');
+    const feedback = document.getElementById('ai-feedback');
+    const impBlock = document.getElementById('ai-improvements-block');
+    const impList  = document.getElementById('ai-improvements-list');
+    const retry    = document.getElementById('retry-block');
+    const formZone = document.getElementById('form-zone');
+
+    const passed = data.passed;
+    const score  = data.score ?? 0;
+
+    // Style selon résultat
+    box.className = `mt-6 rounded-2xl border p-6 transition-all ${
+      passed
+        ? 'border-green-500/30 bg-green-900/10'
+        : 'border-red-500/30 bg-red-900/10'
+    }`;
+
+    circle.className = `w-20 h-20 rounded-full flex flex-col items-center justify-center border-4 flex-shrink-0 ${
+      passed ? 'border-green-500 text-green-400' : 'border-red-500 text-red-400'
+    }`;
+
+    scoreNum.textContent = score;
+    label.textContent    = passed ? ' Mission réussie !' : ' Pas encore...';
+    label.className      = `font-bold text-lg ${passed ? 'text-green-400' : 'text-red-400'}`;
+    feedback.textContent = data.feedback ?? '';
+
+    // Améliorations
+    if (data.improvements && data.improvements.length > 0) {
+      impList.innerHTML = data.improvements.map(tip => `
+        <li class="text-gray-300 text-sm flex gap-2 items-start">
+          <span class="text-yellow-400 mt-0.5 flex-shrink-0">→</span>
+          <span>${tip}</span>
+        </li>
+      `).join('');
+      impBlock.classList.remove('hidden');
+    }
+
+    box.classList.remove('hidden');
+
+    if (passed) {
+      // Masquer le formulaire + afficher toast XP
+      formZone.classList.add('hidden');
+      const toast = document.getElementById('xp-toast');
+      document.getElementById('xp-message').textContent = data.message ?? `+${data.xp_awarded} XP gagnés !`;
+      toast.classList.remove('hidden');
+      setTimeout(() => location.reload(), 2500);
+    } else {
+      // Afficher bouton réessayer
+      retry.classList.remove('hidden');
+    }
+  }
+
+  function resetForm() {
+    document.getElementById('ai-result').classList.add('hidden');
+    document.getElementById('answer-input').value = '';
+    const btn = document.getElementById('submit-btn');
+    btn.disabled = false;
+    btn.innerHTML = `
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path>
+      </svg>
+      Soumettre
+    `;
+  }
+</script>
+{% endblock %}

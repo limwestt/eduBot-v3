@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Missions — EduBot V3{% endblock %}
+
+{% block content %}
+
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold">Missions</h1>
+    <p class="text-gray-400 mt-2">Complète des défis pour gagner de l'XP</p>
+  </div>
+
+  <!-- Missions du Jour -->
+  {% if daily_missions %}
+  <section class="mb-10">
+    <div class="flex items-center gap-3 mb-4">
+      <h2 class="text-xl font-bold">Défis du Jour</h2>
+      <span class="px-3 py-1 bg-brandMain/20 border border-brandMain/30 text-brandGlow text-xs rounded-full font-medium">
+        Aujourd'hui
+      </span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {% for item in daily_missions %}
+      <a href="{% url 'practice:mission_detail' item.mission.id %}"
+         class="bg-gray-900 border rounded-2xl p-6 group transition-all hover:-translate-y-1
+                {% if item.user_mission.status == 'completed' %}border-green-500/30 hover:border-green-500/50{% else %}border-brandMain/20 hover:border-brandMain/50{% endif %}">
+        <div class="flex justify-between items-start mb-3">
+          <span class="text-brandGlow font-bold text-sm">+{{ item.mission.xp_reward }} XP</span>
+          {% if item.user_mission.status == 'completed' %}
+            <span class="flex items-center gap-1 text-green-400 text-xs font-medium">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+              Complétée
+            </span>
+          {% else %}
+            <span class="text-gray-500 text-xs">Active</span>
+          {% endif %}
+        </div>
+        <h3 class="font-bold text-lg mb-2 group-hover:text-brandGlow transition-colors">
+          {{ item.mission.title }}
+        </h3>
+        <p class="text-gray-400 text-sm">{{ item.mission.description|truncatechars:100 }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <!-- Autres Missions -->
+  <section>
+    <h2 class="text-xl font-bold mb-4">Toutes les Missions</h2>
+    <div class="space-y-3">
+      {% for item in other_missions %}
+      <a href="{% url 'practice:mission_detail' item.mission.id %}"
+         class="flex items-center justify-between bg-gray-900 border border-gray-800 rounded-2xl p-5 group hover:border-gray-700 transition-all">
+        <div class="flex-1">
+          <h3 class="font-semibold group-hover:text-brandGlow transition-colors">{{ item.mission.title }}</h3>
+          <p class="text-gray-500 text-sm mt-1">{{ item.mission.description|truncatechars:80 }}</p>
+        </div>
+        <div class="flex items-center gap-4 ml-4">
+          <span class="text-brandGlow font-bold text-sm">+{{ item.mission.xp_reward }} XP</span>
+          {% if item.user_mission.status == 'completed' %}
+            <div class="w-8 h-8 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
+              <svg class="w-4 h-4 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path></svg>
+            </div>
+          {% else %}
+            <div class="w-8 h-8 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </div>
+          {% endif %}
+        </div>
+      </a>
+      {% empty %}
+      <div class="text-center py-16 text-gray-500">
+        Aucune mission disponible. Crée-en depuis l'admin Django !
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}EduBot V3{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandMain: '#6c63ff',
+            brandGlow: '#a78bfa',
+            brandDark: '#0f0f1a',
+          }
+        }
+      }
+    }
+  </script>
+  {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-brandDark text-white font-sans antialiased">
+
+  <div class="flex h-screen overflow-hidden">
+
+    <!-- Inclusion de la Sidebar -->
+    {% include "partials/sidebar.html" %}
+
+    <div class="flex-1 flex flex-col overflow-hidden">
+      <!-- Inclusion de la Topbar -->
+      {% include "partials/topbar.html" %}
+
+      <!-- Contenu principal qui change selon la page -->
+      <main class="flex-1 overflow-y-auto p-6 lg:p-8 bg-[#0a0a12]">
+        {% block content %}{% endblock %}
+      </main>
+    </div>
+
+  </div>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

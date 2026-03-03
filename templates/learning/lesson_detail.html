@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}{{ lesson.title }} — EduBot V3{% endblock %}
+
+{% block content %}
+
+  <!-- Breadcrumb -->
+  <nav class="flex items-center gap-2 text-sm text-gray-500 mb-6">
+    <a href="{% url 'learning:pack_list' %}" class="hover:text-white transition-colors">Packs</a>
+    <span>/</span>
+    <a href="{% url 'learning:pack_detail' pack.slug %}" class="hover:text-white transition-colors">{{ pack.title }}</a>
+    <span>/</span>
+    <span class="text-white">{{ lesson.title }}</span>
+  </nav>
+
+  <div class="max-w-4xl">
+
+    <!-- En-tête leçon -->
+    <div class="flex justify-between items-start mb-6 flex-wrap gap-4">
+      <div>
+        <span class="px-3 py-1 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-700 mb-3 inline-block">
+          {{ lesson.get_lesson_type_display }}
+        </span>
+        <h1 class="text-3xl font-bold">{{ lesson.title }}</h1>
+      </div>
+      <div class="flex items-center gap-2 bg-brandMain/10 border border-brandMain/20 rounded-xl px-4 py-2">
+        <svg class="w-5 h-5 text-brandGlow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+        </svg>
+        <span class="text-brandGlow font-bold">+{{ lesson.xp_reward }} XP</span>
+      </div>
+    </div>
+
+    <!-- Contenu vidéo -->
+    {% if lesson.lesson_type == 'video' and lesson.video_url %}
+    <div class="aspect-video bg-gray-900 rounded-2xl overflow-hidden mb-8 border border-gray-800">
+      <iframe src="{{ lesson.video_url }}" class="w-full h-full" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+
+    <!-- Contenu texte / article -->
+    {% if lesson.content %}
+    <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 mb-8 prose prose-invert prose-lg max-w-none">
+      {{ lesson.content|linebreaks }}
+    </div>
+    {% endif %}
+
+    <!-- Bouton "Marquer comme terminée" -->
+    <div id="completion-zone" class="bg-gray-900 border border-gray-800 rounded-2xl p-6 flex items-center justify-between">
+      {% if already_completed %}
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-green-500/20 border border-green-500/40 flex items-center justify-center">
+            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
+            </svg>
+          </div>
+          <span class="text-green-400 font-medium">Leçon complétée !</span>
+        </div>
+        <a href="{% url 'learning:pack_detail' pack.slug %}"
+           class="bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-xl text-sm font-medium transition-all">
+          Retour au pack
+        </a>
+      {% else %}
+        <p class="text-gray-400 text-sm">Tu as tout lu ? Valide pour gagner tes XP.</p>
+        <button id="complete-btn"
+                onclick="completeLesson('{% url 'learning:complete_lesson' pack.slug lesson.id %}')"
+                class="bg-brandMain hover:bg-brandMain/80 text-white px-6 py-3 rounded-xl text-sm font-bold transition-all flex items-center gap-2">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Marquer comme terminée
+        </button>
+      {% endif %}
+    </div>
+
+    <!-- Toast notification XP -->
+    <div id="xp-toast" class="fixed bottom-6 right-6 bg-brandMain text-white px-6 py-4 rounded-2xl shadow-2xl font-bold text-lg hidden transition-all">
+      <span id="xp-message"></span>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+  function completeLesson(url) {
+    const btn = document.getElementById('complete-btn');
+    btn.disabled = true;
+    btn.textContent = 'Validation...';
+
+    fetch(url, {
+      method: 'POST',
+      headers: {
+        'X-CSRFToken': '{{ csrf_token }}',
+        'Content-Type': 'application/json',
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === 'ok') {
+        // Afficher le toast XP
+        const toast = document.getElementById('xp-toast');
+        document.getElementById('xp-message').textContent = data.message;
+        toast.classList.remove('hidden');
+        setTimeout(() => toast.classList.add('hidden'), 3000);
+
+        // Recharger la page pour afficher l'état "complété"
+        setTimeout(() => location.reload(), 1000);
+      }
+    });
+  }
+</script>
+{% endblock %}
